@@ -8,7 +8,7 @@ async function checkWeather(city) {
   try {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     if (!response.ok) {
-      alert("City not found ❌");
+      alert("City not found ");
       return;
     }
 
@@ -23,22 +23,22 @@ async function checkWeather(city) {
       "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
   } catch (error) {
     console.error("Error fetching weather:", error);
-    alert("Something went wrong 😢");
+    alert("Something went wrong ");
   }
 }
 
-// 🔍 Search button click
+// Search button click
 searchBtn.addEventListener("click", () => {
   const city = searchBox.value.trim();
   if (city) {
     checkWeather(city);
     searchBox.value = "";
   } else {
-    alert("Please enter a city name 🏙️");
+    alert("Please enter a city name");
   }
 });
 
-// ⌨️ Press Enter to search
+// Press Enter to search
 searchBox.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
     const city = searchBox.value.trim();
@@ -46,7 +46,7 @@ searchBox.addEventListener("keyup", (event) => {
       checkWeather(city);
       searchBox.value = "";
     } else {
-      alert("Please enter a city name 🏙️");
+      alert("Please enter a city name");
     }
   }
 });

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
 
-    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -18,40 +17,47 @@
       class="bg-gradient-to-r from-purple-600/20 to-blue-500/30 py-10 px-6 rounded-lg flex flex-col items-center gap-6 shadow-md w-full max-w-md"
     >
       <!-- Search Box -->
-      <div class="w-full flex gap-3">
+      <div class="w-full flex items-center justify-center gap-3">
         <input
           id="searchBox"
-          class="outline-none text-gray-900 text-lg bg-white border border-gray-300 rounded-full px-5 py-2 flex-1"
+          class="outline-none text-gray-900 text-lg bg-white border justify-center border-gray-300 rounded-full px-4 py-2 flex-1"
           type="text"
           placeholder="Enter city name..."
         />
         <button
           id="searchBtn"
-          class="px-6 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700"
+          class="px-6 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition flex-shrink-0 h-full"
         >
           Search
         </button>
       </div>
 
       <!-- Weather Info -->
-      <div class="flex flex-col items-center gap-4 mt-6">
-        <img id="icon" class="w-20 h-20" src="./images/image.png" alt="" />
+      <div class="flex flex-col items-center gap-4 mt-6 w-full">
+        <img
+          id="icon"
+          class="w-20 h-20"
+          src="./images/image-removebg-preview (1).png"
+          alt="Weather Icon"
+        />
         <h2 id="temp" class="text-4xl font-semibold text-black">--°C</h2>
         <p id="city" class="text-3xl font-medium text-gray-800">City</p>
 
-        <div class="flex justify-between items-center gap-20 mt-6">
-          <div class="flex items-center">
+        <div
+          class="flex justify-between items-center gap-20 mt-6 w-full px-2 sm:px-0"
+        >
+          <div class="flex items-center gap-2">
             <i class="fa-solid fa-droplet text-3xl text-blue-500"></i>
-            <div class="px-2 text-center">
-              <p id="humidity" class="font-semibold">--%</p>
+            <div class="text-center">
+              <p id="humidity" class="font-semibold text-lg">--%</p>
               <p class="text-sm text-gray-600">Humidity</p>
             </div>
           </div>
 
-          <div class="flex items-center">
+          <div class="flex items-center gap-2">
             <i class="fa-solid fa-wind text-3xl text-blue-500"></i>
-            <div class="px-2 text-center">
-              <p id="wind" class="font-semibold">-- km/h</p>
+            <div class="text-center">
+              <p id="wind" class="font-semibold text-lg">-- km/h</p>
               <p class="text-sm text-gray-600">Wind Speed</p>
             </div>
           </div>
